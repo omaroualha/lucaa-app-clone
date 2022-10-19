@@ -1,6 +1,6 @@
 import React, {FC, useState} from 'react';
 import WebView from 'react-native-webview';
-import {Box} from './atoms';
+import {Box} from '../atoms';
 
 interface WebviewProps {
   url: string;

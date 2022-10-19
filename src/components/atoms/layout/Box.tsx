@@ -25,9 +25,7 @@ export interface BoxProps
     LayoutProps,
     FlexboxProps,
     PositionProps,
-    BorderProps {
-  test: string;
-}
+    BorderProps {}
 
 export const Box = styled.View<BoxProps>`
   ${position}

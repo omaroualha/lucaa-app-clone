@@ -1,13 +1,16 @@
 import React, {FC} from 'react';
-import {Dimensions, Image, ImageSourcePropType, View} from 'react-native';
+import {useTheme} from 'styled-components';
+import {CompositeScreenProps} from '@react-navigation/native';
+import {Dimensions, Image, ImageSourcePropType} from 'react-native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
-import {CompositeScreenProps} from '@react-navigation/native';
+import {DiscoveryScreen} from '@/features/discovery/DiscoveryScreen';
+import {CheckInStack} from '@/features/checkIn/CheckInStack';
 import {RootStackScreenProps} from './RootStack';
-import {icons} from '../assets';
-import {DiscoveryScreen} from '../features/discovery/DiscoveryScreen';
-import {useTheme} from 'styled-components';
-import {Box} from '../components';
+import {Box} from '@/components';
+import {icons} from '@/assets';
+import {MyLucaStack} from '@/features/myLuca/MyLucaStack';
+import {PayStack} from '@/features/pay/PayStack';
 
 enum BottomTabs {
   DISCOVERY = 'DISCOVERY',
@@ -27,11 +30,12 @@ const TABS = [
 
 export type RootTabParamList = {
   Discovery: undefined;
-  MyLuca: undefined;
-  CheckIn: undefined;
-  Pay: undefined;
+  MyLucaStack: undefined;
+  CheckInStack: undefined;
+  PayStack: undefined;
   Account: undefined;
 };
+
 export type RootTabsProps<Screen extends keyof RootTabParamList> =
   CompositeScreenProps<
     NativeStackScreenProps<RootTabParamList, Screen>,
@@ -45,7 +49,7 @@ export const BottomTabNavigator: FC = () => {
   const theme = useTheme();
   return (
     <BottomTab.Navigator
-      initialRouteName="CheckIn"
+      initialRouteName="CheckInStack"
       screenOptions={{
         tabBarLabelStyle: {color: theme.colors.primary.light},
       }}>
@@ -60,8 +64,8 @@ export const BottomTabNavigator: FC = () => {
         })}
       />
       <BottomTab.Screen
-        name="MyLuca"
-        component={DiscoveryScreen}
+        name="MyLucaStack"
+        component={MyLucaStack}
         options={() => ({
           title: 'MyLuca',
           tabBarIcon: ({focused}) => (
@@ -71,8 +75,8 @@ export const BottomTabNavigator: FC = () => {
       />
 
       <BottomTab.Screen
-        name="CheckIn"
-        component={DiscoveryScreen}
+        name="CheckInStack"
+        component={CheckInStack}
         options={() => ({
           title: 'Check-in',
           tabBarIcon: ({focused}) => (
@@ -81,8 +85,8 @@ export const BottomTabNavigator: FC = () => {
         })}
       />
       <BottomTab.Screen
-        name="Pay"
-        component={DiscoveryScreen}
+        name="PayStack"
+        component={PayStack}
         options={() => ({
           title: 'Pay',
           tabBarIcon: ({focused}) => (

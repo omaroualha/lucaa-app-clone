@@ -1,0 +1,33 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "assets/fonts/Oswald-Medium.ttf",
+      "sha1": "43bd6b779df9839d2fc93cb1ea1efbc5593f9c95"
+    },
+    {
+      "path": "assets/fonts/Oswald-Regular.ttf",
+      "sha1": "1ef35083e69648e0f030f8b57f4fdccfe50ed7a5"
+    },
+    {
+      "path": "assets/fonts/Roboto-Bold.ttf",
+      "sha1": "0ce37ced9c5fcac9bdc452a432c1258870ba4677"
+    },
+    {
+      "path": "assets/fonts/Roboto-Regular.ttf",
+      "sha1": "dd1b1db13ff1f72138c134c62f38fef83749f36a"
+    },
+    {
+      "path": "assets/fonts/Rubik-Bold.ttf",
+      "sha1": "41ea8bf640e3f1b497d8ff1faf79b39d55f9fd84"
+    },
+    {
+      "path": "assets/fonts/Rubik-Medium.ttf",
+      "sha1": "9dd416bb989087a3e63125f4fea7898c97ff157c"
+    },
+    {
+      "path": "assets/fonts/Rubik-Regular.ttf",
+      "sha1": "d06c7083a79f12a8f70b49fe8901c73b80aeda55"
+    }
+  ]
+}

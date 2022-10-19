@@ -1,7 +1,5 @@
 import React, {FC} from 'react';
-
-import {Box} from '../../components';
-import {Webview} from '../../components/WebView';
+import {Box, Webview} from '@/components';
 
 export const DiscoveryScreen: FC = () => {
   return (
